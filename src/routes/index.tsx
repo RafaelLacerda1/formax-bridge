@@ -329,7 +329,7 @@ function BridgePage() {
             {/* Vídeo */}
             <div className="bg-card rounded-3xl p-4 shadow-card border border-border hover:shadow-elegant transition">
               <video
-                src="/videos/prova-social.mp4"
+                src="/public/videos/prova-social.mp4"
                 controls
                 playsInline
                 preload="metadata"
