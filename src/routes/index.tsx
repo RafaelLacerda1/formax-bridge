@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import {
   GraduationCap,
   ShieldCheck,
@@ -28,40 +28,40 @@ export const Route = createFileRoute("/")({
   component: BridgePage,
 });
 
-const PIXEL_ID = "948773708066649";
+// const PIXEL_ID = "948773708066649";
 
-function initMetaPixel() {
-  if (typeof window === "undefined") return;
-  // @ts-expect-error
-  if (window.fbq) return;
-  // @ts-expect-error
-  window.fbq = function () {
-    // @ts-expect-error
-    window.fbq.callMethod
-      // @ts-expect-error
-      ? window.fbq.callMethod.apply(window.fbq, arguments)
-      // @ts-expect-error
-      : window.fbq.queue.push(arguments);
-  };
-  // @ts-expect-error
-  if (!window._fbq) window._fbq = window.fbq;
-  // @ts-expect-error
-  window.fbq.push = window.fbq;
-  // @ts-expect-error
-  window.fbq.loaded = true;
-  // @ts-expect-error
-  window.fbq.version = "2.0";
-  // @ts-expect-error
-  window.fbq.queue = [];
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = "https://connect.facebook.net/en_US/fbevents.js";
-  document.head.appendChild(script);
-  // @ts-expect-error
-  window.fbq("init", PIXEL_ID);
-  // @ts-expect-error
-  window.fbq("track", "PageView");
-}
+// function initMetaPixel() {
+//   if (typeof window === "undefined") return;
+//   // @ts-expect-error
+//   if (window.fbq) return;
+//   // @ts-expect-error
+//   window.fbq = function () {
+//     // @ts-expect-error
+//     window.fbq.callMethod
+//       // @ts-expect-error
+//       ? window.fbq.callMethod.apply(window.fbq, arguments)
+//       // @ts-expect-error
+//       : window.fbq.queue.push(arguments);
+//   };
+//   // @ts-expect-error
+//   if (!window._fbq) window._fbq = window.fbq;
+//   // @ts-expect-error
+//   window.fbq.push = window.fbq;
+//   // @ts-expect-error
+//   window.fbq.loaded = true;
+//   // @ts-expect-error
+//   window.fbq.version = "2.0";
+//   // @ts-expect-error
+//   window.fbq.queue = [];
+//   const script = document.createElement("script");
+//   script.async = true;
+//   script.src = "https://connect.facebook.net/en_US/fbevents.js";
+//   document.head.appendChild(script);
+//   // @ts-expect-error
+//   window.fbq("init", PIXEL_ID);
+//   // @ts-expect-error
+//   window.fbq("track", "PageView");
+// }
 
 const WHATSAPP_URL =
   "https://wa.me/5531995023091?text=" +
@@ -147,9 +147,9 @@ function WhatsAppButton({
 }
 
 function BridgePage() {
-  useEffect(() => {
-    initMetaPixel();
-  }, []);
+  // useEffect(() => {
+  //   initMetaPixel();
+  // }, []);
 
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
