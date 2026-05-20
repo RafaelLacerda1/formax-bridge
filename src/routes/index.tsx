@@ -70,18 +70,45 @@ const WHATSAPP_URL =
   );
 const INSTAGRAM_URL = "https://instagram.com/formax.cursos";
 
+// function trackWhatsAppClick(source: string) {
+//   // @ts-expect-error
+//   if (typeof window !== "undefined" && typeof window.fbq === "function") {
+//     // @ts-expect-error
+//     window.fbq("trackCustom", "CliqueWhatsApp", { source });
+//   }
+// }
+
 function trackWhatsAppClick(source: string) {
+  if (typeof window === "undefined") return;
+
   // @ts-expect-error
-  if (typeof window !== "undefined" && typeof window.fbq === "function") {
-    // @ts-expect-error
-    window.fbq("trackCustom", "CliqueWhatsApp", { source });
+  if (typeof window.fbq !== "function") {
+    console.warn("Meta Pixel não carregado ainda");
+    return;
   }
+
+  // @ts-expect-error
+  window.fbq("trackCustom", "CliqueWhatsApp", {
+    source,
+  });
+
+  console.log("Evento CliqueWhatsApp enviado");
 }
+
+// function openWhatsApp(source: string) {
+//   trackWhatsAppClick(source);
+//   if (typeof window !== "undefined") {
+//     window.open(WHATSAPP_URL, "_blank", "noopener,noreferrer");
+//   }
+// }
 
 function openWhatsApp(source: string) {
   trackWhatsAppClick(source);
+
   if (typeof window !== "undefined") {
-    window.open(WHATSAPP_URL, "_blank", "noopener,noreferrer");
+    setTimeout(() => {
+      window.open(WHATSAPP_URL, "_blank", "noopener,noreferrer");
+    }, 300);
   }
 }
 
