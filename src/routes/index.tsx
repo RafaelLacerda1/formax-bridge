@@ -462,7 +462,7 @@ function BridgePage() {
           </p>
           <div className="mt-10 flex justify-center">
             <WhatsAppButton source="cta-final" variant="giant">
-              QUERO MAIS INFORMAÇÕES NO WHATSAPP
+              CONSULTAR BOLSA NO WHATSAPP
             </WhatsAppButton>
           </div>
           <p className="mt-6 text-sm text-white/80">📱 (31) 99502-3091 • Atendimento humanizado pela Brenda</p>
