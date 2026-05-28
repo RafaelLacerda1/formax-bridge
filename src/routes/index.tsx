@@ -88,11 +88,11 @@ function trackWhatsAppClick(source: string) {
   }
 
   // @ts-expect-error
-  window.fbq("trackCustom", "CliqueWhatsApp", {
+  window.fbq("track", "Lead", {
     source,
   });
 
-  console.log("Evento CliqueWhatsApp enviado");
+  console.log("Evento Lead enviado");
 }
 
 // function openWhatsApp(source: string) {
