@@ -140,3 +140,182 @@ src/
 ├── server.ts
 ├── start.ts
 └── styles.css
+```
+
+### Main Areas
+
+**`src/components/`**
+
+Reusable interface components.
+
+**`src/routes/`**
+
+Application routes and page-level components.
+
+**`src/assets/`**
+
+Images and visual assets used throughout the landing page.
+
+**`src/hooks/`**
+
+Reusable React hooks.
+
+**`src/lib/`**
+
+Shared utilities and application logic.
+
+**`src/styles.css`**
+
+Global styles and visual definitions.
+
+## Architecture
+
+The application uses a component-based React architecture.
+
+The main landing page is implemented as a route and composed of reusable UI elements.
+
+```text
+User
+  |
+  v
+Landing Page
+  |
+  +-- Hero
+  |
+  +-- Benefits
+  |
+  +-- Credibility
+  |
+  +-- Social Proof
+  |
+  +-- Testimonials
+  |
+  +-- Calls to Action
+  |
+  v
+WhatsApp
+  |
+  +-- Lead Event
+  |
+  v
+Marketing Tracking
+```
+
+## Development
+
+### Requirements
+
+- Node.js
+- npm or Bun
+
+### Install dependencies
+
+Using npm:
+
+```bash
+npm install
+```
+
+Or using Bun:
+
+```bash
+bun install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+Or:
+
+```bash
+bun run dev
+```
+
+The development server is provided by Vite.
+
+## Production Build
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+Or:
+
+```bash
+bun run build
+```
+
+The project also includes a Vercel-specific build command:
+
+```bash
+npm run vercel-build
+```
+
+## Code Quality
+
+The project includes ESLint and Prettier configuration.
+
+Run linting with:
+
+```bash
+npm run lint
+```
+
+Format the project with:
+
+```bash
+npm run format
+```
+
+## Deployment
+
+The project is configured for web deployment and has been published through Vercel.
+
+Live application:
+
+https://formax-bridge.vercel.app
+
+## Project Highlights
+
+This project demonstrates practical experience with:
+
+- React application development;
+- TypeScript;
+- Component-based architecture;
+- Responsive web design;
+- Modern frontend tooling;
+- UI component libraries;
+- Routing;
+- Marketing landing pages;
+- Conversion-oriented interfaces;
+- WhatsApp integrations;
+- Event tracking;
+- Vite-based development;
+- Vercel deployment.
+
+## Security and Configuration
+
+Environment-specific values and credentials should not be committed to the repository.
+
+Before deploying the project in another environment, review:
+
+- Marketing tracking configuration;
+- WhatsApp destination numbers;
+- External service URLs;
+- Environment variables;
+- Deployment configuration.
+
+## Project Status
+
+The project is deployed and available as a live web application.
+
+Further improvements may include additional content management capabilities, expanded analytics, automated testing, and further optimization of the conversion funnel.
+
+## Author
+
+Developed as a web development project using modern React and TypeScript technologies.
